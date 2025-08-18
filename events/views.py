@@ -10,3 +10,4 @@ class EventViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         serializer.save(organizer=self.request.user)
+
