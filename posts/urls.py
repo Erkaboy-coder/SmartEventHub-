@@ -1,9 +1,7 @@
-# events/urls.py
-from django.urls import path
 from rest_framework.routers import DefaultRouter
-from .views import PostViewSet   # PostViewSet ni ham import qilamiz
+from .views import PostViewSet
 
 router = DefaultRouter()
-router.register(r'', PostViewSet, basename='post')  # shu yerda qo‘shasan
+router.register(r'posts', PostViewSet, basename='post')
 
 urlpatterns = router.urls
